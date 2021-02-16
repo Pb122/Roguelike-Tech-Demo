@@ -41,8 +41,6 @@ Design Note:
     game state function
 """
 
-#time module included, as of now, for automated testing purpose only
-import time 
 import random
 from data import item_dictionary, move_options, life_list, class_dict
 
@@ -334,7 +332,7 @@ def populate_ground():
             chance = random.random()
             
             if chance >= 0.25 and item != 1:
-                basic_map[y_count][x_count]["contents"] = [item, 1)
+                basic_map[y_count][x_count]["contents"] = [item, 1]
             elif item == 1:
                 basic_map[y_count][x_count]["contents"] = [item, random.randint(1, 50)]
 
